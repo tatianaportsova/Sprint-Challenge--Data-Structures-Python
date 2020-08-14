@@ -20,7 +20,7 @@ class RingBuffer:
         self.added = 0
 
     def append(self, item):
-        if self.added <= (self.capacity - 1):
+        if self.added < (self.capacity):
             self.ringBuffer.insert(self.added, item)
             self.added += 1
         else:
